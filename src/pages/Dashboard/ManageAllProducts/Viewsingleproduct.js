@@ -25,6 +25,7 @@ const Viewsingleproduct = ({product}) => {
                 const remainProduct=products.filter(product=>product.status !=='Shipped')
                 setProducts(remainProduct);
                 setIsUpdate(true);
+                window.location.reload();
 
               }else{
                 setIsUpdate(false)

@@ -22,7 +22,7 @@ const ManageAllProducts = () => {
         fetch(url)
         .then(res=>res.json())
         .then(data=>setallProducts(data));
-    },[])
+    },[allproducts])
     
     return (
         <Container>
@@ -30,8 +30,8 @@ const ManageAllProducts = () => {
             <h2>Pending Products</h2>
             <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)'}}>
                 {
-                    isLoading && <Box sx={{display: 'flex',justifyContent: 'center',alignContent: 'center'}}>
-                            <CircularProgress sx={{}}/>
+                    isLoading && <Box >
+                            <CircularProgress/>
                     </Box>
                     
                 }

@@ -1,3 +1,4 @@
+import { WindowSharp } from '@mui/icons-material';
 import { Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react';
@@ -29,6 +30,7 @@ const ManageSingleProduct = ({product}) => {
                   alert('Deleted Successfully!')
                   const remainingOrders=orders.filter(order=>order._id !== id)
                   setOrders(remainingOrders);
+                  window.location.reload();
               }
           });
         }

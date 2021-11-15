@@ -22,8 +22,8 @@ const ManageProducts = () => {
             <h5>Your Email : {user.email}</h5>
             <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)'}}>
                 {
-                    isLoading && <Box sx={{display: 'flex',justifyContent: 'center',alignContent: 'center'}}>
-                            <CircularProgress sx={{}}/>
+                    isLoading && <Box>
+                            <CircularProgress />
                     </Box>
                     
                 }

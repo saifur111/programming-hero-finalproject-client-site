@@ -29,6 +29,7 @@ const ViewallProduct = ({product}) => {
                   alert('Deleted Successfully!')
                   const remainingProduct=orders.filter(order=>order._id !== id)
                   setOrders(remainingProduct);
+                  window.location.reload();
               }
           });
         }

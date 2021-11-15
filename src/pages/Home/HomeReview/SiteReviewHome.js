@@ -9,7 +9,7 @@ const SiteReviewHome = () => {
     const { isLoading } = useAuth(); 
     const [products,setProducts]=React.useState([]);
     React.useEffect(()=>{
-        const url=`https://young-everglades-47177.herokuapp.com/viewsiteReviews`;
+        const url=`https://rocky-ridge-95438.herokuapp.com/viewsiteReviews`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>setProducts(data));

@@ -28,7 +28,7 @@ const ReviewForm = (props) => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .post("https://young-everglades-47177.herokuapp.com/reviews", data)
+          .post("https://rocky-ridge-95438.herokuapp.com/reviews", data)
           .then((response) => {
             console.log(response);
             if (response.data.insertedId) {

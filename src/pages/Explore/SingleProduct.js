@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const SingleProduct = ({product}) => {
-    const {user}=useAuth();
+    const {admin,user}=useAuth();
     const {_id,price,rating,productname,img } = product;
     return (
         <>
@@ -35,10 +35,22 @@ const SingleProduct = ({product}) => {
                     <Box >
                         {
                             user?.email ?
-                            <Link to={`/purchase/${_id}`}>
-                            <button className="btn btn-primary my-2  btn-fr">
-                            <i className="fas fa-cart"></i> {' '}Add To Cart</button>
-                            </Link>:<Link to='/login'>
+                            <>
+
+                            {
+                                admin?<Link to='/dashboard'>
+                                <button className="btn btn-primary my-2  btn-fr">
+                                <i className="fas fa-cart"></i> {' '}Add To Cart</button>
+                                </Link>
+                                :
+                                <Link to={`/purchase/${_id}`}>
+                                <button className="btn btn-primary my-2  btn-fr">
+                                <i className="fas fa-cart"></i> {' '}Add To Cart</button>
+                                </Link>
+                            }
+                            </>
+                            :
+                            <Link to='/login'>
                             <button className="btn btn-primary my-2  btn-fr">
                             <i className="fas fa-cart"></i> {' '}Add To Cart</button>
                             </Link> 

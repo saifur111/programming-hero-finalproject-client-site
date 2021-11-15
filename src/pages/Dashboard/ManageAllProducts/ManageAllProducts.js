@@ -11,14 +11,14 @@ const ManageAllProducts = () => {
     const [allproducts,setallProducts]=React.useState([]);
     
     useEffect(()=>{
-        const url=`https://young-everglades-47177.herokuapp.com/orders?status=Pending`;
+        const url=`https://rocky-ridge-95438.herokuapp.com/orders?status=Pending`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>setProducts(data));
     },[])
     
     React.useEffect(()=>{
-        const url=`https://young-everglades-47177.herokuapp.com/viewProducts`;
+        const url=`https://rocky-ridge-95438.herokuapp.com/viewProducts`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>setallProducts(data));

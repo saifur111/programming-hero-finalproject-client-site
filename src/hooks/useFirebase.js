@@ -88,7 +88,7 @@ const useFirebase = () => {
 
     // fetch data by email
     useEffect(() => {
-        const url=`https://young-everglades-47177.herokuapp.com/users/${user.email}`;
+        const url=`https://rocky-ridge-95438.herokuapp.com/users/${user.email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -109,7 +109,7 @@ const useFirebase = () => {
     // Save User Data Mongodb
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName,role:'user'};
-        const url=`https://young-everglades-47177.herokuapp.com/users`;
+        const url=`https://rocky-ridge-95438.herokuapp.com/users`;
         fetch(url, {
             method: method,
             headers: {

@@ -10,7 +10,7 @@ const ManageSingleProduct = ({product}) => {
 
 
     useEffect(()=>{
-    fetch(`https://young-everglades-47177.herokuapp.com/orders`)
+    fetch(`https://rocky-ridge-95438.herokuapp.com/orders`)
     .then(res=>res.json())
     .then(data=>setOrders(data))
     },[isUpdate])
@@ -18,7 +18,7 @@ const ManageSingleProduct = ({product}) => {
     const handleDeleteOrder= id =>{
         const proceed=window.confirm('Are you sure,you want to delete');
         if(proceed){
-          const url=`https://young-everglades-47177.herokuapp.com/orders/${id}`
+          const url=`https://rocky-ridge-95438.herokuapp.com/orders/${id}`
           fetch(url,{
               method:'DELETE',
      

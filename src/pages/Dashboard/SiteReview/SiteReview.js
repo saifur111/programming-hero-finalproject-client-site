@@ -29,7 +29,7 @@ const SiteReview = (props) => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .post("https://young-everglades-47177.herokuapp.com/sitereviews", data)
+          .post("https://rocky-ridge-95438.herokuapp.com/sitereviews", data)
           .then((response) => {
             console.log(response);
             if (response.data.insertedId) {

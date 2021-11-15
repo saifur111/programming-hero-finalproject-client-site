@@ -15,13 +15,13 @@ const UpdateProduct = () => {
     const [product,setProduct]=useState({});
     
     useEffect(()=>{
-        fetch(`http://young-everglades-47177.herokuapp.com/updateProducts/${id}`)
+        fetch(`https://rocky-ridge-95438.herokuapp.com/updateProducts/${id}`)
         .then(res=>res.json())
         .then(data=>setProduct(data));
     },[product,id])
     // young-everglades-47177.herokuapp.com/
     const onSubmit = data =>{
-        const url=`http://young-everglades-47177.herokuapp.com/updateProducts/${id}`;
+        const url=`https://rocky-ridge-95438.herokuapp.com/updateProducts/${id}`;
         fetch(url,{
             method :'PUT',
             headers: {

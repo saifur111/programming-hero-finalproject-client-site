@@ -7,7 +7,7 @@ const NewArival = () => {
     const { isLoading } = useAuth(); 
     const [products,setProducts]=React.useState([]);
     React.useEffect(()=>{
-        const url=`https://young-everglades-47177.herokuapp.com/viewProducts`;
+        const url=`https://rocky-ridge-95438.herokuapp.com/viewProducts`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>setProducts(data));

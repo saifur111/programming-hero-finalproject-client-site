@@ -12,7 +12,7 @@ const MakeAdmin = () => {
     }
     const handleAdminSubmit = e => {
         const user = { email };
-        const url=`https://young-everglades-47177.herokuapp.com/users/admin`;
+        const url=`https://rocky-ridge-95438.herokuapp.com/users/admin`;
         fetch(url, {
             method: 'PUT',
             headers: {

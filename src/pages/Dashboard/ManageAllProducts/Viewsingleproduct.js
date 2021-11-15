@@ -8,7 +8,7 @@ const Viewsingleproduct = ({product}) => {
         const[isUpdate,setIsUpdate]=useState(null);
         const [products,setProducts]=useState([]);
         useEffect(()=>{
-            const url=`https://young-everglades-47177.herokuapp.com/orders?status=Pending`;
+            const url=`https://rocky-ridge-95438.herokuapp.com/orders?status=Pending`;
             fetch(url)
             .then(res=>res.json())
             .then(data=>setProducts(data));
@@ -16,7 +16,7 @@ const Viewsingleproduct = ({product}) => {
 
         const handleUpdate = id =>{
  
-            const url=`https://young-everglades-47177.herokuapp.com/orders/${id}`
+            const url=`https://rocky-ridge-95438.herokuapp.com/orders/${id}`
             fetch(url)
             .then(res=>res.json())
             .then(data=>{

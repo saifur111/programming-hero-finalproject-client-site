@@ -9,7 +9,7 @@ const ManageProducts = () => {
     const [manageproducts, setManageProducts] = useState([]);
 
     useEffect(() => { 
-        fetch(`https://young-everglades-47177.herokuapp.com/ManageProducts?email=${user.email}`)
+        fetch(`https://rocky-ridge-95438.herokuapp.com/ManageProducts?email=${user.email}`)
             .then(res => res.json())
             .then(data => setManageProducts(data));
     }, [user.email])

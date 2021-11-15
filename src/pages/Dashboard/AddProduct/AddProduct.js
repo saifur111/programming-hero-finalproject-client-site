@@ -36,7 +36,7 @@ const AddProduct = () => {
         // collect data
         e.preventDefault();
         // send to the server
-        const url=`https://young-everglades-47177.herokuapp.com/addProducts`;
+        const url=`https://rocky-ridge-95438.herokuapp.com/addProducts`;
         fetch(url, {
             method: 'POST',
             headers: {

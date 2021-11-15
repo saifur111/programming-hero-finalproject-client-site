@@ -15,7 +15,7 @@ const Purchase = () => {
     const [products, setProducts] = useState([]);
     const [singleProduct, setsingleProduct] = useState({});
     useEffect(() => {
-      fetch("https://young-everglades-47177.herokuapp.com/viewProducts")
+      fetch("https://rocky-ridge-95438.herokuapp.com/viewProducts")
         .then((res) => res.json())
         .then((data) => setProducts(data));
     }, []);
